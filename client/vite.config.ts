@@ -6,8 +6,8 @@ export default defineConfig({
   server: {
     port: 5173,
     proxy: {
-      '/api': 'http://localhost:3000',
-      '/proxy': 'http://localhost:3000'
+      '/api': 'https://countdown-timer-app.onrender.com',
+      '/proxy': 'https://countdown-timer-app.onrender.com'
     }
   },
   build: { outDir: 'dist' }
