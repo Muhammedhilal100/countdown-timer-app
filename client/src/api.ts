@@ -1,7 +1,11 @@
 import axios from 'axios';
 import type { Timer } from './types';
 
-const api = axios.create({ baseURL: '/api' });
+const api = axios.create({
+  baseURL: import.meta.env.PROD
+    ? 'https://countdown-timer-app.onrender.com/api'
+    : '/api'
+});
 
 export const listTimers = (shop: string) => api.get<Timer[]>('/timers', { params: { shop } }).then(r => r.data);
 export const createTimer = (t: Timer) => api.post<Timer>('/timers', t).then(r => r.data);
