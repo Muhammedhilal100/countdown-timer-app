@@ -1,0 +1,20 @@
+name = "Countdown Timer App"
+client_id = "381e892e78fe2fef6bd2dc7aaf08349f"
+application_url = "https://f2ab80c88458.ngrok-free.app"
+embedded = true
+
+[webhooks]
+api_version = "2024-07"
+
+[auth]
+redirect_urls = ["https://f2ab80c88458.ngrok-free.app/auth/callback"]
+
+[app_proxy]
+url = "https://f2ab80c88458.ngrok-free.app/proxy"
+subpath = "ctimer"
+prefix = "apps"
+
+[build]
+automatically_update_urls_on_dev = true
+include_dev_sourcemaps = true
+include_config_on_deploy = true

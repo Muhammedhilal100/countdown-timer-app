@@ -1,0 +1,18 @@
+{% schema %}
+{
+  "name": "Countdown timer",
+  "target": "section",
+  "settings": [
+    { "type": "text", "id": "target_selector", "label": "Mount selector", "default": "#ctimer-root" }
+  ]
+}
+{% endschema %}
+
+<div id="ctimer-root" data-product-id="{{ product.id }}"></div>
+
+<script src="{{ 'ctimer-widget.js' | asset_url }}"
+        defer
+        data-shop="{{ shop.permanent_domain }}"
+        data-target="#ctimer-root"
+        data-api-url="https://f2ab80c88458.ngrok-free.app">
+</script>

@@ -1,0 +1,7 @@
+{
+  "name": "Countdown Timer",
+  "target_selector_label": "Mount selector",
+  "position_label": "Position",
+  "position_top": "Top",
+  "position_bottom": "Bottom"
+}

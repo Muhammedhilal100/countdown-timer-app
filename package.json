@@ -1,0 +1,32 @@
+{
+  "name": "countdown-timer-app",
+  "private": true,
+  "version": "1.0.0",
+"type": "module",
+  "workspaces": [
+    "client",
+    "widget"
+  ],
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development node server/index.js",
+    "build:admin": "pnpm --filter client build",
+    "build:widget": "pnpm --filter widget build",
+    "build": "pnpm build:admin && pnpm build:widget",
+    "start": "cross-env NODE_ENV=production node server/index.js"
+  },
+  "dependencies": {
+    "@shopify/shopify-api": "^11.14.1",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dayjs": "^1.11.11",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.2",
+    "morgan": "^1.10.0",
+    "preact": "^10.20.2"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
